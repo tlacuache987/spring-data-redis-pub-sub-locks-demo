@@ -13,12 +13,19 @@ mvn spring-boot:run -Dspring.profiles.active=publisher
 Publisher will start sending (publish) messages to subscribers every 5 seconds.
 
 3. Open 'n' terminals and execute some subscribers, several subscribers can be executed as follows (in different terminals):
+
 mvn spring-boot:run -Dspring.profiles.active=subscriber,annotation-lock,keep-trying
+
 or
+
 mvn spring-boot:run -Dspring.profiles.active=subscriber,annotation-lock,try-once
+
 or
+
 mvn spring-boot:run -Dspring.profiles.active=subscriber,programmatic-lock,keep-trying
+
 or
+
 mvn spring-boot:run -Dspring.profiles.active=subscriber,programmatic-lock,try-once
 
 4. Analyze configuration to understand what's under the hood.
